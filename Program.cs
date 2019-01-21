@@ -1,5 +1,7 @@
 ﻿using System;
-using HeadFirstDesignPatterns.AboutDuck.Ch1st;
+using HeadFirstDesignPatterns.AboutDuck.Ch1;
+using HeadFirstDesignPatterns.Ch2;
+using HeadFirstDesignPatterns.Ch2.Displays;
 
 namespace HeadFirstDesignPatterns
 {
@@ -7,7 +9,8 @@ namespace HeadFirstDesignPatterns
     {
         static void Main(string[] args)
         {
-            Test_1();
+            // Test_1();
+            Test_2();
         }
 
         public static void Test_1()
@@ -20,6 +23,19 @@ namespace HeadFirstDesignPatterns
             mallardDuck.PerformQuack();
             mallardDuck.SetFlyBehavior(new FlyLikeRocket());
             mallardDuck.PerformFly();
+        }
+    
+        public static void Test_2()
+        {
+            var wd = new WeatherData();
+            var currentConditionDisplay = new CurrentConditionDisplay(wd);
+
+            wd.SetMeasurements(20, 30, 40);
+            wd.SetMeasurements(50, 60, 80);
+            wd.SetMeasurements(20, 30, 40);
+
+
+
         }
     }
 }
