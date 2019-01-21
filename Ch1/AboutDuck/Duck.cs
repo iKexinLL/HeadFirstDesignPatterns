@@ -1,6 +1,6 @@
 using System;
 
-namespace HeadFirstDesignPatterns.AboutDuck.Ch1st
+namespace HeadFirstDesignPatterns.AboutDuck.Ch1
 {
     public abstract class Duck
     {

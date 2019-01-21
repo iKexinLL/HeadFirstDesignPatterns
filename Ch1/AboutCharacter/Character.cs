@@ -1,4 +1,4 @@
-namespace HeadFirstDesignPatterns.Ch1st.AboutCharacter
+namespace HeadFirstDesignPatterns.Ch1.AboutCharacter
 {
     public abstract class Character
     {

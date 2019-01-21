@@ -1,4 +1,4 @@
-namespace HeadFirstDesignPatterns.AboutDuck.Ch1st
+namespace HeadFirstDesignPatterns.AboutDuck.Ch1
 {
     public interface IQuackBehavior
     {
