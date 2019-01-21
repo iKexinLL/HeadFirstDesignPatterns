@@ -29,6 +29,7 @@ namespace HeadFirstDesignPatterns
         {
             var wd = new WeatherData();
             var currentConditionDisplay = new CurrentConditionDisplay(wd);
+            var thirdPartyDisplay = new ThirdPartyDisplay(wd);
 
             wd.SetMeasurements(20, 30, 40);
             wd.SetMeasurements(50, 60, 80);
