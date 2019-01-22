@@ -35,8 +35,6 @@ namespace HeadFirstDesignPatterns
             wd.SetMeasurements(50, 60, 80);
             wd.SetMeasurements(20, 30, 40);
 
-
-
         }
     }
 }

@@ -1,18 +1,19 @@
 using System.Collections;
+using System.Collections.Generic;
 using HeadFirstDesignPatterns.Ch2.Interfaces;
 
 namespace HeadFirstDesignPatterns.Ch2
 {
     public class WeatherData : ISubject
     {
-        private ArrayList observers;
+        private List<IObserver> observers;
         private float temperature;
         private float humidity; // 湿度
         private float pressure;
 
         public WeatherData()
         {
-            observers = new ArrayList();
+            observers = new List<IObserver>();
         }
 
         /// <summary>
