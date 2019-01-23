@@ -23,6 +23,8 @@ namespace HeadFirstDesignPatterns.Ch2
         {
             for (int i = 0; i < observers.Count; i++)
             {
+                // 这里面的i是实现IObserver的类
+                // 所以实际调用的是对应的类中的update方法
                 var observser = (IObserver)observers[i];
                 observser.Update(temperature, humidity, pressure);
             }
@@ -51,9 +53,11 @@ namespace HeadFirstDesignPatterns.Ch2
         // 当存在变化时,通知观察者
         public void MeasurementsChanged()
         {
+            // 调用事件
             NotifyObservers();
         }
 
+        // 调用事件
         public void SetMeasurements(float temperature, float humidity, float pressure)
         {
             this.temperature = temperature;
