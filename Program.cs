@@ -2,6 +2,7 @@
 using HeadFirstDesignPatterns.AboutDuck.Ch1;
 using HeadFirstDesignPatterns.Ch2;
 using HeadFirstDesignPatterns.Ch2.Displays;
+using HeadFirstDesignPatterns.DelegateAndEvent;
 
 namespace HeadFirstDesignPatterns
 {
@@ -10,7 +11,10 @@ namespace HeadFirstDesignPatterns
         static void Main(string[] args)
         {
             // Test_1();
-            Test_2();
+            // Test_2();
+
+            GreetingManager.TestStart();
+            TestStartGreetingManager2.TestStart();
         }
 
         public static void Test_1()
