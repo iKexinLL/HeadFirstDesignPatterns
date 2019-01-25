@@ -17,23 +17,20 @@ namespace HeadFirstDesignPatterns.DelegateAndEvent
             if (delgeate1 != null)
                 delgeate1(name);
         }
-    }
 
-    public class GreetingManager2
-    {
-       private static void EnglishGreeting(string name) {
+        private static void EnglishGreeting(string name) {
            Console.WriteLine("Morning, " + name);
        }
 
-       private static void ChineseGreeting(string name) {
+        private static void ChineseGreeting(string name) {
            Console.WriteLine("早上好, " + name);
        }        
 
         /// <summary>
         /// 通过委托,调用不同的方法
         /// </summary>
-       public static void TestStart()
-       {
+        public static void TestStart()
+        {
             GreetingManager2 gm = new GreetingManager2();
             Console.WriteLine("In TestStartGreetingManager2.GreetPeople: ");
             gm.GreetPeople("Jimmy Zhang", EnglishGreeting);
@@ -43,7 +40,7 @@ namespace HeadFirstDesignPatterns.DelegateAndEvent
             gm.delgeate1 += ChineseGreeting;
             gm.GreetPeople2("QWE");
             // Console.Ready();
-       }        
+        }        
     } 
 
 }
