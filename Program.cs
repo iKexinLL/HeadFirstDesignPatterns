@@ -1,8 +1,8 @@
-﻿using System;
-using HeadFirstDesignPatterns.AboutDuck.Ch1;
+﻿using HeadFirstDesignPatterns.AboutDuck.Ch1;
 using HeadFirstDesignPatterns.Ch2;
 using HeadFirstDesignPatterns.Ch2.Displays;
 using HeadFirstDesignPatterns.DelegateAndEvent;
+using HeadFirstDesignPatterns.DelegateAndEventTwo;
 
 namespace HeadFirstDesignPatterns
 {
@@ -12,10 +12,9 @@ namespace HeadFirstDesignPatterns
         {
             // Test_1();
             // Test_2();
+            // TestGreetingManager()
 
-            GreetingManager.TestStart();
-            GreetingManager2.TestStart();
-            GreetingManager3.TestStart();
+            DelegateAndEventTwo();
         }
 
         public static void Test_1()
@@ -39,6 +38,18 @@ namespace HeadFirstDesignPatterns
             wd.SetMeasurements(20, 30, 40);
             wd.SetMeasurements(50, 60, 80);
             wd.SetMeasurements(20, 30, 40);
+        }
+    
+        public static void TestGreetingManager()
+        {
+            GreetingManager.TestStart();
+            GreetingManager2.TestStart();
+            GreetingManager3.TestStart();            
+        }
+    
+        public static void DelegateAndEventTwo()
+        {
+            Heater.TestStart();
         }
     }
 }
