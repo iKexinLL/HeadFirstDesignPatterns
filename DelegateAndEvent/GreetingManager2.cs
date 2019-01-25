@@ -19,7 +19,7 @@ namespace HeadFirstDesignPatterns.DelegateAndEvent
         }
     }
 
-    public class TestStartGreetingManager2
+    public class GreetingManager2
     {
        private static void EnglishGreeting(string name) {
            Console.WriteLine("Morning, " + name);
