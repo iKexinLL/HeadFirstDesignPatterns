@@ -18,19 +18,15 @@ namespace HeadFirstDesignPatterns.DelegateAndEvent
        }        
 
         /// <summary>
-        /// 通过委托,调用不同的方法
+        /// 使用事件调用委托
         /// </summary>
        public static void TestStart()
        {
             GreetingManager3 gm = new GreetingManager3();
             Console.WriteLine("In TestStartGreetingManager3.GreetPeople: ");
-            gm.MakeGreet += EnglishGreeting(qwe);
-            gm.GreetPeople("张子阳", ChineseGreeting);
-            Console.WriteLine("In TestStartGreetingManager3.GreetPeople2: ");
-            gm.delgeate1 += EnglishGreeting;
-            gm.delgeate1 += ChineseGreeting;
-            gm.GreetPeople2("QWE");
-            // Console.Ready();
+            gm.MakeGreet += new GreetingManager3EventHandler(EnglishGreeting);
+            gm.MakeGreet += new GreetingManager3EventHandler(ChineseGreeting);
+            gm.MakeGreet("qwe");
        }        
     } 
 

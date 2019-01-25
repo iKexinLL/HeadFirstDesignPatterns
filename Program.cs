@@ -14,7 +14,8 @@ namespace HeadFirstDesignPatterns
             // Test_2();
 
             GreetingManager.TestStart();
-            TestStartGreetingManager2.TestStart();
+            GreetingManager2.TestStart();
+            GreetingManager3.TestStart();
         }
 
         public static void Test_1()
