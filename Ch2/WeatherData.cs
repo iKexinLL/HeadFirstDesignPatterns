@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HeadFirstDesignPatterns.Ch2.Displays;
 using HeadFirstDesignPatterns.Ch2.Interfaces;
 
 namespace HeadFirstDesignPatterns.Ch2
@@ -64,6 +65,17 @@ namespace HeadFirstDesignPatterns.Ch2
             this.humidity = humidity;
             this.pressure = pressure;
             MeasurementsChanged();
+        }
+
+        public static void TestStart()
+        {
+            var wd = new WeatherData();
+            var currentConditionDisplay = new CurrentConditionDisplay(wd);
+            var thirdPartyDisplay = new ThirdPartyDisplay(wd);
+
+            wd.SetMeasurements(20, 30, 40);
+            wd.SetMeasurements(50, 60, 80);
+            wd.SetMeasurements(20, 30, 40);
         }
     }
 }

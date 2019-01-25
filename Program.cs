@@ -31,13 +31,7 @@ namespace HeadFirstDesignPatterns
     
         public static void Test_2()
         {
-            var wd = new WeatherData();
-            var currentConditionDisplay = new CurrentConditionDisplay(wd);
-            var thirdPartyDisplay = new ThirdPartyDisplay(wd);
-
-            wd.SetMeasurements(20, 30, 40);
-            wd.SetMeasurements(50, 60, 80);
-            wd.SetMeasurements(20, 30, 40);
+            WeatherData.TestStart();
         }
     
         public static void TestGreetingManager()
